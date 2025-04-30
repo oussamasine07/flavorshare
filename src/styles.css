@@ -10,3 +10,13 @@ body {
 .active {
     color: #E6A11B;
 }
+
+.hero-content {
+    background-image: url('/assets/recepie-hero.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-content:visited {
+    transform: scaleX(-1);
+}
