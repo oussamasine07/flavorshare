@@ -1,1 +1,22 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+    color: #222;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.active {
+    color: #E6A11B;
+}
+
+.hero-content {
+    background-image: url('/assets/recepie-hero.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-content:visited {
+    transform: scaleX(-1);
+}
