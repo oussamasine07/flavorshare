@@ -10,8 +10,7 @@ import { FooterComponent } from './components/partials/footer/footer.component';
   selector: 'app-root',
   imports: [
     RouterOutlet,
-    NavbarComponent, HeroSectionComponent, SectionHeadingComponent, 
-    CardWrapperComponent, FooterComponent
+    NavbarComponent, FooterComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
