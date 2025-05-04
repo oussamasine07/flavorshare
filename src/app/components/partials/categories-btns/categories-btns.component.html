@@ -1,0 +1,17 @@
+<div class="py-3">
+    <div class="container">
+        <div class="flex justify-center items-center flex-wrap w-full">
+            <button 
+                class="py-2 px-6 m-2 capitalize font-bold rounded-4xl cursor-pointer hover:bg-[#BFBBBB] transition-all" data-category="all" 
+                (click)="onCategoryBtnClick('all')"
+                [ngClass]=" selectedCategory === 'all' ? 'bg-[#222222] text-[#E6A11B]' : 'bg-[#d9d9d9] text-[#222222]'"
+            >all categories</button>
+            <button 
+                class="py-2 px-6 m-2 capitalize font-bold rounded-4xl cursor-pointer hover:bg-[#BFBBBB] transition-all" *ngFor="let category of categories" 
+                [attr.data-category]="category.strCategory" 
+                (click)="onCategoryBtnClick(category.strCategory)"
+                [ngClass]=" selectedCategory === category.strCategory ? 'bg-[#222222] text-[#E6A11B]' : 'bg-[#d9d9d9] text-[#222222]'"
+            >{{ category.strCategory }}</button>
+        </div>
+    </div>
+</div>
