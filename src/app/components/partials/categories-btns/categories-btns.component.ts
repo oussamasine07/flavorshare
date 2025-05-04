@@ -1,11 +1,15 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Category } from '../../../interfaces/category';
+import { NgFor } from '@angular/common';
 
 @Component({
   selector: 'app-categories-btns',
-  imports: [],
+  imports: [
+    NgFor
+  ],
   templateUrl: './categories-btns.component.html',
   styleUrl: './categories-btns.component.css'
 })
 export class CategoriesBtnsComponent {
-
+  @Input() categories!: Category[] | null;
 }
