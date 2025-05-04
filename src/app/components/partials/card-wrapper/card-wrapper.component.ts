@@ -38,4 +38,13 @@ export class CardWrapperComponent implements OnInit {
       }
     });
   }
+
+  getCategoryRecipes (category: string) {
+    const url = category == "all" ? "https://www.themealdb.com/api/json/v1/1/search.php?s" : `https://www.themealdb.com/api/json/v1/1/filter.php?c=${category}`;
+    this.recipeService.getRecipesByCategory(url).subscribe({
+      next: (res) => {
+        this.recipes = res.meals;
+      }
+    });
+  }
 }

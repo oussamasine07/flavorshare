@@ -27,4 +27,8 @@ export class RecipeService {
 
   }
 
+  getRecipesByCategory (url: string) {
+    return this.httpClient.get<MealResponse>(url)
+  }
+
 }

@@ -1,4 +1,4 @@
-<app-categories-btns [categories]="categories"></app-categories-btns>
+<app-categories-btns [categories]="categories" (categoryEmiter)="getCategoryRecipes($event)"></app-categories-btns>
 <div class="container">
     <div class="grid grid-cols-12 gap-8 my-5">
         <div class="col-span-3" *ngFor="let responseRecipe of recipes">

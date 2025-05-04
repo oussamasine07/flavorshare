@@ -1,7 +1,8 @@
 <div class="py-3">
     <div class="container">
         <div class="flex justify-center items-center flex-wrap w-full">
-            <button class="py-2 px-6 m-2 capitalize font-bold bg-[#d9d9d9] rounded-4xl cursor-pointer hover:bg-[#BFBBBB] transition-all" *ngFor="let category of categories">{{ category.strCategory }}</button>
+            <button class="py-2 px-6 m-2 capitalize font-bold bg-[#d9d9d9] rounded-4xl cursor-pointer hover:bg-[#BFBBBB] transition-all" data-category="all" (click)="onCategoryBtnClick('all')">all categories</button>
+            <button class="py-2 px-6 m-2 capitalize font-bold bg-[#d9d9d9] rounded-4xl cursor-pointer hover:bg-[#BFBBBB] transition-all" *ngFor="let category of categories" [attr.data-category]="category.strCategory" (click)="onCategoryBtnClick(category.strCategory)">{{ category.strCategory }}</button>
         </div>
     </div>
 </div>

@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Category } from '../../../interfaces/category';
 import { NgFor } from '@angular/common';
 
@@ -12,4 +12,10 @@ import { NgFor } from '@angular/common';
 })
 export class CategoriesBtnsComponent {
   @Input() categories!: Category[] | null;
+
+  @Output() categoryEmiter = new EventEmitter();
+
+  onCategoryBtnClick (category: string) {
+    this.categoryEmiter.emit(category)
+  }
 }
